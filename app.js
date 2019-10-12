@@ -17,17 +17,8 @@ var commentRoutes    = require("./routes/comments"),
     authRoutes       = require("./routes/index");    
 
 console.log(process.env.DATABASEURL)
-console.log(process.env.DATABASEURL)
-/* mongoose.connect("mongodb+srv://heroku1:heroku1@cluster0-p4bfn.mongodb.net/Cluster0?retryWrites=true&w=majority", {
-    useNewUrlParser:true,
-    useCreateIndex:true
-}).then(() => {
-    console.log('Connected to DB');
-}
-).catch(err => {
-    console.log("Error", err.message);
-});
- */app.use(bodyParser.urlencoded({extended: true}));
+mongoose.connect(process.env.DATABASEURL);
+app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
