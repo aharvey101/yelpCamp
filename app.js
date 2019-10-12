@@ -17,6 +17,7 @@ var commentRoutes    = require("./routes/comments"),
     authRoutes       = require("./routes/index");    
 
 console.log(process.env.DATABASEURL)
+console.log(process.env.DATABASEURL)
 /* mongoose.connect("mongodb+srv://heroku1:heroku1@cluster0-p4bfn.mongodb.net/Cluster0?retryWrites=true&w=majority", {
     useNewUrlParser:true,
     useCreateIndex:true
