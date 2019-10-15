@@ -18,3 +18,8 @@
 	height: 400px;
 	width: 100%;
 }
+
+.signUpForm {
+	width: 20%;
+	margin: 25px auto;
+}
