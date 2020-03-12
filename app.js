@@ -40,7 +40,7 @@ passport.use(new localStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
 	res.locals.currentUser = req.user;
 	res.locals.error = req.flash('error');
 	res.locals.success = req.flash('success');
@@ -51,10 +51,10 @@ app.use('/', authRoutes);
 app.use('/campgrounds', campgroundRoutes);
 app.use(commentRoutes);
 
-app.get('/', function(req, res) {
+app.get('/', function (req, res) {
 	res.render('landing');
 });
 
-app.listen(process.env.PORT || 3000, process.env.IP, function() {
+app.listen(process.env.PORT || 3000, process.env.IP, function () {
 	console.log('The YelpCamp Server Has Started!');
 });
